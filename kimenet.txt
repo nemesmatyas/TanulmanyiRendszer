@@ -1,0 +1,21 @@
+TANULMÁNYI RENDSZER
+intézmény neve: Széchenyi István Egyetem
+intézmény címe: 9024 Győr, Egyetem tér 1.
+telefonszáma: 0696503400
+oktatott tantárgyak: 
+tárgykód: GKLB_INTM037	tantárgy neve: Java programozás	kreditérték: 6	oktató: Varjasi Norbert	rövid leírás: Java
+tárgykód: EKLB_KETM029	tantárgy neve: CAD alkalmazások 1.	kreditérték: 4	oktató: Horváth Zsolt	rövid leírás: AutoCAD
+tárgykód: GKLB_INTM042	tantárgy neve: Portálfejlesztés .NET-ben	kreditérték: 6	oktató: Galli Richárd	rövid leírás: Portál
+tárgykód: GKLB_INTM097	tantárgy neve: Szakdolgozati konzultáció II.	kreditérték: 6	oktató: Takács Gábor	rövid leírás: Szakdoga 2
+hallgatók: 
+neptunkód: CDE456	hallgató neve: Hans von Rotbandenberger	email cím: hans@sze.hu	telefonszám: 06701231423	állampolgárság: osztrák
+neptunkód: HUN123	hallgató neve: Csák Ányos	email cím: csak.anyos@sze.hu	telefonszám: 06204373443	lakóhely távolsága (km): 55
+neptunkód: HUN345	hallgató neve: Cserepesné Kiss Virág	email cím: cskissvirag@sze.hu	telefonszám: 062055555555	lakóhely távolsága (km): 178
+neptunkód: AKC555	hallgató neve: Akciós Áron	email cím: akcios.aron@sze.hu	telefonszám: 063033333333	ösztöndíjas: true
+neptunkód: BBB111	hallgató neve: Kukor Ilona	email cím: kukorica@sze.hu	telefonszám: 062011111111	ösztöndíjas: true
+neptunkód: AAA999	hallgató neve: Majse Greestem	email cím: majse@sze.hu	telefonszám: 0630999999999	állampolgárság: norvég
+
+vizsgaeredmények: 
+2023-05-20	Hans von Rotbandenberger	CDE456	Java programozás	GKLB_INTM037	3
+2023-06-07	Csák Ányos	HUN123	CAD alkalmazások 1.	EKLB_KETM029	2
+2023-06-15	Akciós Áron	AKC555	Szakdolgozati konzultáció II.	GKLB_INTM097	5
