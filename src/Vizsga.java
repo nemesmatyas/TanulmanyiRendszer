@@ -10,7 +10,7 @@ public class Vizsga {
         NEM_JELENT_MEG,
         IGAZOLT_TAVOLLET,
         MEGFELELT,
-        JOL_MEGFELELT,;
+        JOL_MEGFELELT;
 
         private final int jegy;
 

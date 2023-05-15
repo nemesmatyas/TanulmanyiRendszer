@@ -18,8 +18,10 @@ neptunkód: BBB111	hallgató neve: Kukor Ilona	email cím: kukorica@sze.hu	telef
 neptunkód: AAA999	hallgató neve: Majse Greestem	email cím: majse@sze.hu	telefonszám: 0630999999999	állampolgárság: norvég
 
 vizsgaeredmények: 
-2023-05-20	Hans von Rotbandenberger	CDE456	Java programozás	GKLB_INTM037	ELEGSEGES
-2023-06-07	Csák Ányos	HUN123	CAD alkalmazások 1.	EKLB_KETM029	JO
+2023-05-20	Hans von Rotbandenberger	CDE456	Java programozás	GKLB_INTM037	JO
+2023-06-07	Csák Ányos	HUN123	CAD alkalmazások 1.	EKLB_KETM029	KOZEPES
 2023-06-15	Akciós Áron	AKC555	Szakdolgozati konzultáció II.	GKLB_INTM097	ELEGTELEN
-2023-06-15	Akciós Áron	AKC555	Szakdolgozati konzultáció II.	GKLB_INTM097	NEM_JELENT_MEG
-2023-06-15	Akciós Áron	AKC555	Szakdolgozati konzultáció II.	GKLB_INTM097	JELES
+2023-07-01	Kukor Ilona	BBB111	Portálfejlesztés .NET-ben	GKLB_INTM042	NEM_JELENT_MEG
+2023-06-28	Majse Greestem	AAA999	CAD alkalmazások 1.	EKLB_KETM029	JELES
+2023-06-28	Akciós Áron	AKC555	CAD alkalmazások 1.	EKLB_KETM029	JOL_MEGFELELT
+2023-06-28	Kukor Ilona	BBB111	CAD alkalmazások 1.	EKLB_KETM029	IGAZOLT_TAVOLLET
