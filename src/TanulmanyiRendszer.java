@@ -72,7 +72,7 @@ public class TanulmanyiRendszer {
 
     public Tantargy tantargyatKeres(String targynev) {
         for (var t : tantargyak) {
-            if (t.getNev() == targynev) {
+            if (t.getNev().equals(targynev)) {
                 return t;
             }
         }
@@ -152,8 +152,8 @@ public class TanulmanyiRendszer {
                 "intézmény neve: " + intezmenyNev + '\n' +
                 "intézmény címe: " + intezmenyCim + '\n' +
                 "telefonszáma: " + telSzam + '\n' +
-                "oktatott tantárgyak: \n" + sbTantargy.toString() +
-                "hallgatók: \n" + sbHallgatok.toString() + '\n' +
-                "vizsgaeredmények: \n" + sbEredmenyek.toString();
+                "oktatott tantárgyak: \n" + sbTantargy +
+                "hallgatók: \n" + sbHallgatok + '\n' +
+                "vizsgaeredmények: \n" + sbEredmenyek;
     }
 }
