@@ -1,12 +1,38 @@
 import java.time.LocalDate;
 
 public class Vizsga {
+    public enum Eredmenyek {
+        ELEGTELEN(1),
+        ELEGSEGES(2),
+        KOZEPES(3),
+        JO(4),
+        JELES(5),
+        NEM_JELENT_MEG,
+        IGAZOLT_TAVOLLET,
+        MEGFELELT,
+        JOL_MEGFELELT,;
+
+        private final int jegy;
+
+        Eredmenyek() {
+            this.jegy = ordinal() + 1;
+        }
+
+        Eredmenyek(int jegy) {
+            this.jegy = jegy;
+        }
+
+        public int getJegy() {
+            return jegy;
+        }
+    }
+
     private Hallgato hallgato;
     private Tantargy tantargy;
     private LocalDate datum;
-    private int eredmeny;
+    private Eredmenyek eredmeny;
 
-    public Vizsga(Hallgato hallgato, Tantargy tantargy, LocalDate datum, int eredmeny) {
+    public Vizsga(Hallgato hallgato, Tantargy tantargy, LocalDate datum, Eredmenyek eredmeny) {
         this.hallgato = hallgato;
         this.tantargy = tantargy;
         this.datum = datum;
@@ -38,11 +64,11 @@ public class Vizsga {
         this.datum = datum;
     }
 
-    public int getEredmeny() {
+    public Eredmenyek getEredmeny() {
         return eredmeny;
     }
 
-    public void setEredmeny(int eredmeny) {
+    public void setEredmeny(Eredmenyek eredmeny) {
         this.eredmeny = eredmeny;
     }
 

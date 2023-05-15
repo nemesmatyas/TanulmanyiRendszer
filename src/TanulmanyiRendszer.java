@@ -39,11 +39,11 @@ public class TanulmanyiRendszer {
 
     }
 
-    public void vizsgaEredmenyRogzit(Hallgato hallgato, Tantargy tantargy, LocalDate datum, int eredmeny) {
+    public void vizsgaEredmenyRogzit(Hallgato hallgato, Tantargy tantargy, LocalDate datum, Vizsga.Eredmenyek eredmeny) {
         if (hallgatok.contains(hallgato) && tantargyak.contains(tantargy)) {
             Vizsga vizsga = new Vizsga(hallgato, tantargy, datum, eredmeny);
             eredmenyek.add(vizsga);
-            System.out.println("Vizsgaeredmény rögzítve a(z) " + tantargy.getNev() + " (" + tantargy.getTargykod() + ") tantárgyhoz " + datum + "időpontban. " +
+            System.out.println("Vizsgaeredmény rögzítve a(z) " + tantargy.getNev() + " (" + tantargy.getTargykod() + ") tantárgyhoz " + datum + " időpontban. " +
                     " Eredmény: " + eredmeny);
         } else {
             throw new IllegalArgumentException("Hiba! Csak beiratkozott hallgató vizsgázhat, és csak olyan tantárgyból, amit oktat az intézmény!");
@@ -64,10 +64,14 @@ public class TanulmanyiRendszer {
             return 0.0;
 
         double osszeg = 0.0;
+        int db = 0;
         for (var v : eredmenyek) {
-            osszeg += v.getEredmeny();
+            if (v.getEredmeny().getJegy() >= 1 && v.getEredmeny().getJegy() <= 5) {
+                osszeg += v.getEredmeny().getJegy();
+                db++;
+            }
         }
-        return osszeg / eredmenyek.size();
+        return osszeg / db;
     }
 
     public Tantargy tantargyatKeres(String targynev) {
@@ -152,8 +156,8 @@ public class TanulmanyiRendszer {
                 "intézmény neve: " + intezmenyNev + '\n' +
                 "intézmény címe: " + intezmenyCim + '\n' +
                 "telefonszáma: " + telSzam + '\n' +
-                "oktatott tantárgyak: \n" + sbTantargy +
-                "hallgatók: \n" + sbHallgatok + '\n' +
-                "vizsgaeredmények: \n" + sbEredmenyek;
+                "\noktatott tantárgyak: \n" + sbTantargy +
+                "\nhallgatók: \n" + sbHallgatok +
+                "\nvizsgaeredmények: \n" + sbEredmenyek;
     }
 }
