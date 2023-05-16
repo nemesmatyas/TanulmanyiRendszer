@@ -25,24 +25,23 @@ public class TanulmanyiRendszer {
     }
 
     public void hallgatoBeirat(Hallgato ujHallgato) {
-        hallgatok.add(ujHallgato);
+        this.hallgatok.add(ujHallgato);
         System.out.println(ujHallgato.getNev() + "(" + ujHallgato.getNeptunkod() + ") sikeresen felvéve a hallgatók közé!");
     }
 
     public void hallgatoPasszival(Hallgato passzivHallgato) {
-        if (hallgatok.contains(passzivHallgato)) {
-            hallgatok.remove(passzivHallgato);
+        if (this.hallgatok.contains(passzivHallgato)) {
+            this.hallgatok.remove(passzivHallgato);
             System.out.println(passzivHallgato.getNev() + "(" + passzivHallgato.getNeptunkod() +") passziváltatva!");
         } else {
             System.out.println("A megadott hallgató nincs beiratkozva az intézménybe!");
         }
-
     }
 
     public void vizsgaEredmenyRogzit(Hallgato hallgato, Tantargy tantargy, LocalDate datum, Vizsga.Eredmenyek eredmeny) {
-        if (hallgatok.contains(hallgato) && tantargyak.contains(tantargy)) {
+        if (this.hallgatok.contains(hallgato) && this.tantargyak.contains(tantargy)) {
             Vizsga vizsga = new Vizsga(hallgato, tantargy, datum, eredmeny);
-            eredmenyek.add(vizsga);
+            this.eredmenyek.add(vizsga);
             System.out.println("Vizsgaeredmény rögzítve a(z) " + tantargy.getNev() + " (" + tantargy.getTargykod() + ") tantárgyhoz " + datum + " időpontban. " +
                     " Eredmény: " + eredmeny);
         } else {
@@ -53,19 +52,19 @@ public class TanulmanyiRendszer {
     public String osszesTaroltVizsgaEredmeny() {
         System.out.println("VIZSGAEREDMÉNYEK");
         StringBuilder eredmeny = new StringBuilder();
-        for (var v : eredmenyek) {
+        for (var v : this.eredmenyek) {
             eredmeny.append(v.getHallgato().getNev()).append('\t').append(v.getTantargy().getNev()).append('\t').append(v.getEredmeny()).append('\n');
         }
         return eredmeny.toString();
     }
 
     public double vizsgaAtlag() {
-        if (eredmenyek.size() == 0)
+        if (this.eredmenyek.size() == 0)
             return 0.0;
 
         double osszeg = 0.0;
         int db = 0;
-        for (var v : eredmenyek) {
+        for (var v : this.eredmenyek) {
             if (v.getEredmeny().getJegy() >= 1 && v.getEredmeny().getJegy() <= 5) {
                 osszeg += v.getEredmeny().getJegy();
                 db++;
@@ -75,7 +74,7 @@ public class TanulmanyiRendszer {
     }
 
     public Tantargy tantargyatKeres(String targynev) {
-        for (var t : tantargyak) {
+        for (var t : this.tantargyak) {
             if (t.getNev().equals(targynev)) {
                 return t;
             }
